@@ -18,15 +18,12 @@
      <div>
           <h3>Välj månad och dag när du är född</h3>
      </div>
-     <div id="message"></div>
-
-
-
+   
     
-     <select name='month' id="month">
-
-          <option value='januari'>Januari</option>
-          <option value='februari'>Februari</option>
+     <select name='month' id="month" method="POST">
+          <option value="" style="display:none;"></option>
+          <option value='Januari'>Januari</option>
+          <option value='Februari'>Februari</option>
           <option value='Mars'>Mars</option>
           <option value='April'>April</option>
           <option value='Maj'>Maj</option>
@@ -43,8 +40,8 @@
 
          
 
-     <select name='day' id="day">
-
+     <select name='day' id="day" method="POST">
+          <option value="" style="display:none;"></option>
           <option value='1'>01</option>
           <option value='2'>02</option>
           <option value='3'>03</option>
@@ -78,19 +75,16 @@
           <option value='31'>31</option>
      </select>
 
-     
+
+<p id="horoscope_sign"></p>
 
 
 
-<br><br>
-
-<button onclick="saveHoroscope()">spara mitt horoskop</button><br>
-
-<button onclick="viewHoroscope()">se mitt horoskop</button><br>
+<button onclick="saveHoroscope(); hide()" id="save">spara mitt horoskop</button><br>
 
 <button onclick="updateHoroscope()">uppdatera mitt horoskop</button><br>
 
-<button onclick="deleteHoroscope()">radera mitt horoskop</button>
+<button onclick="deleteHoroscope(); refreshPage()">radera mitt horoskop</button>
 
 
 </body>
